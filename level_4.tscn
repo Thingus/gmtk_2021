@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://textures/rainbow.shader" type="Shader" id=1]
+[ext_resource path="res://Background.gd" type="Script" id=2]
+[ext_resource path="res://SceneManager.gd" type="Script" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://Computer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://level_5.tscn" type="PackedScene" id=6]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 1 )
+
+[node name="root" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="background" type="Sprite" parent="."]
+script = ExtResource( 2 )
+
+[node name="comp_2" parent="." instance=ExtResource( 5 )]
+material = SubResource( 1 )
+position = Vector2( 353.725, 239.443 )
+scale = Vector2( 0.9, 0.9 )
+connectors = [ 2, 2 ]
+
+[node name="comp_4" parent="." instance=ExtResource( 5 )]
+material = SubResource( 1 )
+position = Vector2( 472.598, 409.606 )
+scale = Vector2( 0.9, 0.9 )
+wire_list = [ 0 ]
+connectors = [ 2 ]
+start_state = 3
+
+[node name="comp_3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 772.478, 239.981 )
+scale = Vector2( 0.9, 0.9 )
+connectors = [ 2 ]
+start_state = 6
+next_level = ExtResource( 6 )
+
+[node name="comp_5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 565.851, 245.021 )
+scale = Vector2( 0.9, 0.9 )
+connectors = [ 2 ]
+start_state = 4
+
+[node name="comp_1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 132.586, 235.733 )
+scale = Vector2( 0.9, 0.9 )
+wire_list = [ 2 ]
+connectors = [ 2 ]
+is_start = true
+start_state = 1
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+material = SubResource( 2 )
+position = Vector2( 441.219, 123.668 )
+texture = ExtResource( 4 )

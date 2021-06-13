@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/satisfied_sound.wav-930e6cd0559dea4976517e882f24211f.sample"
+
+[deps]
+
+source_file="res://audio/satisfied_sound.wav"
+dest_files=[ "res://.import/satisfied_sound.wav-930e6cd0559dea4976517e882f24211f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Virus.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/basic_virus.png-a29ccee2122cad6fe111b7c0550950da.stex"
+
+[node name="Virus" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="basic_virus" type="Sprite" parent="."]
+position = Vector2( 2.06804, 1.50241 )
+texture = SubResource( 1 )

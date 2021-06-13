@@ -1,0 +1,67 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Computer",
+"language": "GDScript",
+"path": "res://Computer.gd"
+}, {
+"base": "Node2D",
+"class": "Connection",
+"language": "GDScript",
+"path": "res://Connection.gd"
+}, {
+"base": "Node2D",
+"class": "Connector",
+"language": "GDScript",
+"path": "res://Connector.gd"
+}, {
+"base": "Node2D",
+"class": "Highlighter",
+"language": "GDScript",
+"path": "res://Highlighter.gd"
+}, {
+"base": "Node2D",
+"class": "Virus",
+"language": "GDScript",
+"path": "res://Virus.gd"
+}, {
+"base": "Node2D",
+"class": "WireIcon",
+"language": "GDScript",
+"path": "res://WireIcon.gd"
+} ]
+_global_script_class_icons={
+"Computer": "",
+"Connection": "",
+"Connector": "",
+"Highlighter": "",
+"Virus": "",
+"WireIcon": ""
+}
+
+[application]
+
+config/name="gmtk_2021"
+run/main_scene="res://level_1.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Whiteboard="*res://Whiteboard.gd"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
